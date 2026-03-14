@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fernando Gonzalez Diaz">
-    <meta name="Description" content="Conversor de monedas - Examen Módulo JS - Desarrollador Front End - Desafío LATAM">
+    <meta name="Description" content="Conversor de monedas - Examen Módulo JS - Desarrollador Front/End - Desafío LATAM">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Conversor de monedas</title>
 </head>
 <body>
-    <header>
-        <h1>Conversor de monedas nacional</h1>
-    </header>
-    <hr>
-    <main>
-        <div class="converter-container">
-            <h3>Pesos CLP</h3>
-            <input type="text">
-            <label for="currency">Moneda a convertir:</label>
-            <select name="currency" id="currency">
-                <option value="">Dolar</option>
-                <option value="">Euro</option>
-                <option value="">Peso Argentino</option>
+    <div class="container">
+        <h1>Conversor de monedas Nacional</h1>
+        
+        <div class="card">
+            <h2>Pesos CLP</h2>
+            <input type="number" id="montoClp" placeholder="Ingrese el monto en CLP">
+            
+            <p>Moneda a convertir:</p>
+            <select id="monedaSelect">
+                <option value="" disabled selected>Seleccione moneda</option>
+                <option value="dolar">Dólar</option>
+                <option value="euro">Euro</option>
             </select>
-            <button id="search">Buscar</button>
-            <h3 id="result"></h3>
+            
+            <button id="btnBuscar">Buscar</button>
+            
+            <h3 id="resultado">Resultado: $0</h3>
+            <p id="errorMensaje" class="error"></p>
         </div>
-        <div class="gráfica">
-            <canvas id="myChart"></canvas>
+
+        <div class="chart-container">
+            <canvas id="miGrafico"></canvas>
         </div>
-    </main>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>

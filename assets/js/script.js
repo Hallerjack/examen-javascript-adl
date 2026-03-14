@@ -17,10 +17,10 @@ btnBuscar.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch(`https://mindicador.cl/api/${moneda}`);
-        if (!response.ok) throw new Error("Error al consultar la API");
+        const res = await fetch(`https://mindicador.cl/api/${moneda}`);
+        if (!res.ok) throw new Error("Error al consultar la API");
         
-        const data = await response.json();
+        const data = await res.json();
 
         const valorActual = data.serie[0].valor;
         const calculo = (monto / valorActual).toFixed(2);
