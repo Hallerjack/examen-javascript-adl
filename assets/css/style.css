@@ -1,0 +1,63 @@
+/* AJUSTES GENERALES */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #212529;
+    --seconday-color: #6d757d;
+    --btn-color: #56d3f4;
+    --clear-color: #ffffff;
+    
+    --txt-color-1: #ffffff;
+    --txt-color-2: #000000;
+}
+
+body {
+    font-family: Roboto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--txt-color-1);
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--btn-color);
+    width: 90%;
+    margin: 1em 0em;
+}
+
+/* CONTAINER */
+
+.converter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+    background-color: var(--seconday-color);
+    border-radius: 10px;
+    gap: 10px;
+}
+
+input {
+    padding: 0.3em;
+    border: solid 0px;
+    border-radius: 5px;
+}
